@@ -1,6 +1,6 @@
 # **Cloudflare Domain with Nginx and Apache on AWS EC2**
 
-**A demonstration of hosting two web servers (Nginx and Apache) on AWS EC2 instances, with DNS routing using Cloudflare.**
+A demonstration of hosting two web servers (Nginx and Apache) on AWS EC2 instances, with DNS routing using Cloudflare.
 
 ---
 
@@ -111,7 +111,7 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
 
-1. **Verify Apache is running** by visiting the instance's public IP in a browser. You should see the default Nginx welcome page.
+3. **Verify Apache is running** by visiting the instance's public IP in a browser. You should see the default Nginx welcome page.
 
 ![](images/apache1.png)
 
@@ -132,13 +132,14 @@ With both servers running, I used **Cloudflare** to route traffic to each instan
      - **IPv4 Address**: Public IP of the EC2 instance running Apache.
 3. **Wait for DNS propagation** (usually a few minutes), then verify by accessing:
    - `nginx.zeynabyusuf.com` for Nginx.
-
+--- 
 ![](images/nginx2.png)
    - `apache.zeynabyusuf.com` for Apache.
 
 ![](images/Apache2.png)
-
-
+ 
+ 
+ ---
 ## Future Improvements
 - **SSL (HTTPS) Integration:** Add SSL certificates to enable HTTPS for secure communication.
 - **Automation with Terraform:** Automate the entire infrastructure setup using Infrastructure-as-Code (Terraform).
