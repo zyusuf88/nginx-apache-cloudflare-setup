@@ -76,10 +76,10 @@ The first step in this project was to purchase a domain via Cloudflare. Cloudfla
 
    ```bash
    #!/bin/bash
-   sudo yum update -y
-   sudo yum install -y nginx
-   sudo systemctl start nginx
-   sudo systemctl enable nginx
+   yum update -y
+   yum install -y nginx
+   systemctl start nginx
+   systemctl enable nginx
    ```
 
 
@@ -105,10 +105,10 @@ The first step in this project was to purchase a domain via Cloudflare. Cloudfla
 
 ```bash
 #!/bin/bash
-sudo yum update -y
-sudo yum install httpd -y
-sudo systemctl start httpd
-sudo systemctl enable httpd
+yum update -y
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
 ```
 
 3. **Verify Apache is running** by visiting the instance's public IP in a browser. You should see the default Nginx welcome page.
